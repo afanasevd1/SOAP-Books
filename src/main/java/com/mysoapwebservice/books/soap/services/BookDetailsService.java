@@ -1,6 +1,6 @@
-package com.my.soap.web.service.soap.services;
+package com.mysoapwebservice.books.soap.services;
 
-import com.my.soap.web.service.soap.bean.Book;
+import com.mysoapwebservice.books.soap.bean.Book;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -44,9 +44,10 @@ public class BookDetailsService {
         Iterator<Book> iterator = bookList.listIterator();
         while (iterator.hasNext()) {
             Book book = iterator.next();
-            if (book.getId() == id)
+            if (book.getId() == id) {
                 iterator.remove();
-            return 1;
+                return 1;
+            }
         }
         return 0;
     }

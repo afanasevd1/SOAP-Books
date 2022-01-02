@@ -10,7 +10,6 @@ package com.mysoapwebservice.books;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="BookDetails" type="{http://mySoapWebService.com/books}BookDetails"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,43 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "bookDetails"
+    "id"
 })
-@XmlRootElement(name = "GetBookDetailsResponse")
-public class GetBookDetailsResponse {
+@XmlRootElement(name = "DeleteBookDetailsRequest")
+public class DeleteBookDetailsRequest {
 
-    @XmlElement(name = "BookDetails", required = true)
-    protected BookDetails bookDetails;
+    protected int id;
 
-    public GetBookDetailsResponse(BookDetails bookDetails) {
-        this.bookDetails = bookDetails;
-    }
-
-    public GetBookDetailsResponse() {
+    /**
+     * Gets the value of the id property.
+     * 
+     */
+    public int getId() {
+        return id;
     }
 
     /**
-     * Gets the value of the bookDetails property.
+     * Sets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link BookDetails }
-     *     
      */
-    public BookDetails getBookDetails() {
-        return bookDetails;
-    }
-
-    /**
-     * Sets the value of the bookDetails property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BookDetails }
-     *     
-     */
-    public void setBookDetails(BookDetails value) {
-        this.bookDetails = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
 }

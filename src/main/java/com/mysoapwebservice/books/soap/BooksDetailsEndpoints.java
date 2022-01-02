@@ -1,7 +1,7 @@
-package com.my.soap.web.service.soap;
+package com.mysoapwebservice.books.soap;
 
-import com.my.soap.web.service.soap.bean.Book;
-import com.my.soap.web.service.soap.services.BookDetailsService;
+import com.mysoapwebservice.books.soap.bean.Book;
+import com.mysoapwebservice.books.soap.services.BookDetailsService;
 import com.mysoapwebservice.books.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -28,6 +28,12 @@ public class BooksDetailsEndpoints {
     @ResponsePayload
     public GetAllBooksDetailsResponse processAllBookDetailsRequest(@RequestPayload GetAllBooksDetailsRequest request) {
         return mapAllBooksToResponse(service.findAll());
+    }
+
+    @PayloadRoot(namespace = "http://mySoapWebService.com/books", localPart = "DeleteBookDetailsRequest")
+    @ResponsePayload
+    public DeleteBookDetailsResponse processAllBookDetailsRequest(@RequestPayload DeleteBookDetailsRequest request) {
+        return new DeleteBookDetailsResponse(service.deleteById(request.getId()));
     }
 
     private GetAllBooksDetailsResponse mapAllBooksToResponse(List<Book> bookList) {

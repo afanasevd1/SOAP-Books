@@ -1,4 +1,4 @@
-package com.my.soap.web.service.soap;
+package com.mysoapwebservice.books.soap;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
