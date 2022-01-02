@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetBookDetailsResponse
+        xmlns="http://mySoapWebService.com/books"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://mySoapWebService.com/books http://mySoapWebService.com/books">
+    <BookDetails>
+        <id>1</id>
+        <name>Three pigs</name>
+        <description>It is a Fairy tale for children</description>
+    </BookDetails>
+</GetBookDetailsResponse>
