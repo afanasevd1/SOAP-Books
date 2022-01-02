@@ -1,4 +1,4 @@
-package com.my.soap.web.service.soap.bean;
+package com.mysoapwebservice.books.soap.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
