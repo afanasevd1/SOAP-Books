@@ -8,18 +8,14 @@
 
 package com.mysoapwebservice.books;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -31,12 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "bookDetails"
+        "bookDetails"
 })
 @XmlRootElement(name = "GetBookDetailsResponse")
 public class GetBookDetailsResponse {
@@ -53,11 +47,9 @@ public class GetBookDetailsResponse {
 
     /**
      * Gets the value of the bookDetails property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BookDetails }
-     *     
+     *
+     * @return possible object is
+     * {@link BookDetails }
      */
     public BookDetails getBookDetails() {
         return bookDetails;
@@ -65,11 +57,9 @@ public class GetBookDetailsResponse {
 
     /**
      * Sets the value of the bookDetails property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BookDetails }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BookDetails }
      */
     public void setBookDetails(BookDetails value) {
         this.bookDetails = value;

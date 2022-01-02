@@ -35,7 +35,9 @@ public class BookDetailsService {
         return null;
     }
 
-    public List<Book> findAll(){return bookList;}
+    public List<Book> findAll() {
+        return bookList;
+    }
 
     public int deleteById(int id) {
 
@@ -44,7 +46,7 @@ public class BookDetailsService {
             Book book = iterator.next();
             if (book.getId() == id)
                 iterator.remove();
-                return 1;
+            return 1;
         }
         return 0;
     }
