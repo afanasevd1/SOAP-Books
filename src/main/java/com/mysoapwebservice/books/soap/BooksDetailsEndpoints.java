@@ -1,8 +1,14 @@
 package com.mysoapwebservice.books.soap;
 
+import com.mysoapwebservice.books.BookDetails;
+import com.mysoapwebservice.books.DeleteBookDetailsRequest;
+import com.mysoapwebservice.books.DeleteBookDetailsResponse;
+import com.mysoapwebservice.books.GetAllBooksDetailsRequest;
+import com.mysoapwebservice.books.GetAllBooksDetailsResponse;
+import com.mysoapwebservice.books.GetBookDetailsRequest;
+import com.mysoapwebservice.books.GetBookDetailsResponse;
 import com.mysoapwebservice.books.soap.bean.Book;
 import com.mysoapwebservice.books.soap.services.BookDetailsService;
-import com.mysoapwebservice.books.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;

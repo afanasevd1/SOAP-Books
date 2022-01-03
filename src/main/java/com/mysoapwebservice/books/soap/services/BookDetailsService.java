@@ -1,6 +1,7 @@
 package com.mysoapwebservice.books.soap.services;
 
 import com.mysoapwebservice.books.soap.bean.Book;
+import com.mysoapwebservice.books.soap.exceptions.BookNotFoundException;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -39,7 +40,7 @@ public class BookDetailsService {
             if (book.getId() == id)
                 return book;
         }
-        return null;
+        throw new BookNotFoundException("Invalid book id " + id);
     }
 
     public List<Book> findAll() {
