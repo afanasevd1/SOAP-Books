@@ -8,6 +8,7 @@
 
 package com.mysoapwebservice.books;
 
+import com.mysoapwebservice.books.soap.services.BookDetailsService.ResponseStatus;
 import lombok.NoArgsConstructor;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -18,9 +19,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -32,36 +33,32 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "status"
+        "status"
 })
 @XmlRootElement(name = "DeleteBookDetailsResponse")
 public class DeleteBookDetailsResponse {
 
-    protected int status;
+    protected ResponseStatus status;
 
-    public DeleteBookDetailsResponse(int status) {
+    public DeleteBookDetailsResponse(ResponseStatus status) {
         this.status = status;
     }
 
     /**
      * Gets the value of the status property.
-     * 
      */
-    public int getStatus() {
+    public ResponseStatus getStatus() {
         return status;
     }
 
     /**
      * Sets the value of the status property.
-     * 
      */
-    public void setStatus(int value) {
+    public void setStatus(ResponseStatus value) {
         this.status = value;
     }
 

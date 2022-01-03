@@ -7,8 +7,15 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import static com.mysoapwebservice.books.soap.services.BookDetailsService.ResponseStatus.FAILURE;
+import static com.mysoapwebservice.books.soap.services.BookDetailsService.ResponseStatus.SUCCESS;
+
 @Component
 public class BookDetailsService {
+
+    public enum ResponseStatus {
+        SUCCESS, FAILURE
+    }
 
     private static List<Book> bookList = new ArrayList<>();
 
@@ -39,16 +46,16 @@ public class BookDetailsService {
         return bookList;
     }
 
-    public int deleteById(int id) {
+    public ResponseStatus deleteById(int id) {
 
         Iterator<Book> iterator = bookList.listIterator();
         while (iterator.hasNext()) {
             Book book = iterator.next();
             if (book.getId() == id) {
                 iterator.remove();
-                return 1;
+                return SUCCESS;
             }
         }
-        return 0;
+        return FAILURE;
     }
 }
